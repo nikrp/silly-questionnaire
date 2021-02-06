@@ -1,0 +1,49 @@
+6;six
+blue;lime green
+the mississippi river;mississippi
+blinding lights 
+heartless 
+pandemic
+50
+7
+north america
+4
+california;CA;ca
+alaska
+california;CA;ca
+8000 bce;8000 BCE;8000 bc;8000 BC
+8
+2
+1
+0
+0
+yes
+16 miles;16 mi
+6 miles;6 mi
+16/3
+in the asteroid belt;the asteroid belt;asteroid belt
+in the kuiper belt;the kuiper belt;kuiper belt
+mars jupiter;mars and jupiter;jupiter mars;jupiter and mars
+hydrogen and helium;hydrogen helium;helium and hydrogen;helium hydrogen
+mercury, venus, earth, mars;mercury venus earth mars
+jupiter, saturn, uranus, neptune;jupiter saturn uranus neptune
+earth;the earth;our home;our home planet
+mars;the red planet;red planet
+mercury
+neptune
+mercury
+jupiter
+mars and venus;venus and mars;mars venus;mars venus
+1848
+Call of Duty: Warzone
+The Black Death;the black death;black death;Black death
+
+
+
+
+
+
+
+
+
+

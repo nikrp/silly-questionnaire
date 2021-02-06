@@ -1,38 +1,47 @@
 '''
-
-    My program prints out a quiz that has three questions. It then checks if the question is correct or wrong. If it is wrong, it adds it to a variable which
-will then be printed out at the end as a score.
-
+    1. Open a questions file and save it in a variable.
+    2. Generate a number between one and the number of questions.
+    3. Print the question.
+    4. Open the answer file.
+    5. Print the answer for the question he asked.
+    6. Ask him more questions.
 '''
-print("Today, I am going to give you a quiz on easy stuff, it is three questions. Make sure you add your name!")
-name = input("Name: ")
-wrongCounter = 0
-questionOne = int(input("What is X, if X + 7843518734560 = 7843518734561? "))
-if questionOne == 7843518734561 - 7843518734560:
-    print("Correct!!!")
-else:
-    print("Wrong!!!")
-    wrongCounter += 1
+import random
 
-questionTwo = int(input("What is 30 + 30? "))
-if questionTwo == 30 + 30:
-    print("Correct!!!")
-else:
-    print("Wrong!!!")
-    wrongCounter += 1
+# Open the question file and read it into array
+qFile = open(r"questions.txt", 'r')
+qList = qFile.readlines()
+#print(qList); Temp
 
-questionThree = int(input("What is 7 * 8/28 + 14? Remember to use the order of operations! "))
-if questionThree == 7*8/28+14:
-    print("Correct!!!")
-else:
-    print("Wrong!!!")
-    wrongCounter += 1
+#Open answer file
+aFile = open(r"answers.txt", 'r')
+aFileList = aFile.readlines()
 
-if wrongCounter == 0:
-    print(f'Hey {name}, You Passed!!')
-elif wrongCounter == 3:
-    print("Hard Luck, You Failed College...")
-else:
-    print(f"Hey {name}, Only {wrongCounter} Wrong! Great Job!")
+correctCount = 0
+totalCount = int(input("How many questions do you want to answer?: "))
 
-print("Great job everyone!!! I hope I see you all again!")
+for i in range(0, totalCount):
+    # Generate the num 0-19 and display that question
+    num = random.randint(0, 36)
+    theirAnswer = input(qList[num])
+    #print(theirAnswer) #Temp
+
+    #split line num to array
+    aList = aFileList[num].strip().split(';')
+    #print(aList) #Temp
+
+    # Check for answer
+    if theirAnswer.lower() in aList:
+        print("Correct!!!")
+        correctCount += 1
+    else:
+        print("Nice Try!")
+
+print(correctCount)
+passPercentage = (correctCount/totalCount)*100
+roundingPercent = round(passPercentage, 2)
+print(f"Your score is {roundingPercent}%! Great job!")
+    
+#cleanup before exit
+qFile.close()
+aFile.close()
